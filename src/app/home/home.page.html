@@ -1,20 +1,70 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <div class="items-container">
+      <div class="size-box fist"></div>
+      <div class="size-box title">
+        <ion-title class="title-label">
+          Notes
+        </ion-title>
+      </div>
+      <div class="size-box save">
+
+      </div>
+    </div>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<div class="notes-task-container">
+<div class="inner-container">
+<div class="text-input-title">
+  <div class="inner-container">
+    <div class="title"> <ion-label>Title</ion-label></div>
+    <div class="title-input">
+      <ion-input [(ngModel)]="title" placeholder="Task"></ion-input>
+    </div>
   </div>
+
+</div>
+<div class="text-input-description">
+  <div class="inner-container">
+    <div class="content"> <ion-label>Content</ion-label></div>
+    <div class="content-input">
+      <ion-input [(ngModel)]="content"  placeholder="Content here"></ion-input>
+    </div>
+  </div>
+</div>
+<div class="add-notes-button">
+  <div class="inner-container">
+    <ion-button (click)="addItems()">Add Notes</ion-button>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="view-list-container">
+<div class="sorting">
+  <div class="sorting-inner-container">
+    <div [ngClass]="{'selected': item.selected,'item':item.selected == false}" (click)="sortBy(item.id)" *ngFor="let item of sortBywhat">
+      <ion-label>{{item.name}}</ion-label>
+    </div>
+  </div>
+</div>
+<div class="list-container">
+  <div class="list-inner-container">
+    <ion-item *ngFor="let item of notes">
+      <div class="inner-container-item">
+        <div class="title">
+          <ion-label>Title: {{item.title}}</ion-label>
+        </div>
+        <div class="content">
+          <ion-label>Content: {{item.content}}</ion-label>
+        </div>
+      </div>
+
+    </ion-item>
+  </div>
+</div>
+</div>
 </ion-content>

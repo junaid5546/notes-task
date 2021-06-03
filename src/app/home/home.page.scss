@@ -25,3 +25,126 @@
 #container a {
   text-decoration: none;
 }
+
+.notes-task-container{
+  height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .inner-container{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .text-input-title{
+      border-bottom: 1px solid;
+    border-color: #C7C8CA;
+    .inner-container{
+      .title{
+        color: #77787B;
+        font-weight: 600;
+      }
+      .title-input{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    }
+    }
+    .text-input-description{
+      border-bottom: 1px solid;
+      border-color: #C7C8CA;
+      .inner-container{
+        .content{
+          color: #77787B;
+          font-weight: 600;
+        }
+        .content-input{
+          padding-top: 5px;
+          padding-bottom: 5px;
+        }
+      }
+    }
+    .add-notes-button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .inner-container{
+        width: 90%;
+        ion-button{
+          margin: 0;
+          --background: #2B68A0;
+        }
+      }
+    }
+  }
+}
+.items-container{
+  display: flex;
+  .save{
+    color: #2B68A0;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .size-box{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    .title-label{
+      text-align: center;
+    }
+
+  }
+}
+
+ion-input{
+  --padding-start:0px !important;
+  --padding-top: 0px !important;
+  --padding-bottom:0px !important;
+}
+
+.view-list-container{
+
+  height: 500px;
+  background: green;
+  margin-top: 10px;
+.sorting{
+  background-color: #EEEEEE;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid;
+    border-color: #C7C8CA;
+  .sorting-inner-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    .item{
+      background: white;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+  }
+}
+}
+
+.selected{
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 4px;
+      margin-right: 10px;
+  background-color: #2b67a038 !important;
+}
